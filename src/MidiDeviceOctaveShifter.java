@@ -257,8 +257,8 @@ public class MidiDeviceOctaveShifter extends Application {
 			
         }
 		
-            return items;
+        return items;
 	
-	}
+    }
     
 }
