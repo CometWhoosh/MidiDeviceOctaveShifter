@@ -10,8 +10,9 @@ import javax.sound.midi.ShortMessage;
 import javax.sound.midi.Synthesizer;
 
 /**
- * This class shifts the incoming midi messages an octave up or down. It has 
- * fields for the synthesizer and receiver
+ * This class shifts the incoming MIDI messages a specified number 
+ * of octaves up or down. It has fields for the synthesizer and 
+ * receiver.
  *
  * @author Yousef Bulbulia
  */
@@ -37,6 +38,13 @@ public class OctaveShifter implements Receiver {
         
     }
     
+    /**
+     * {@inheritDoc}
+     *
+     * The MIDI message is shifter up or down by the number of
+     * octaves specified in the constructor.
+     * 
+     */
     public void send(MidiMessage message, long timestamp) {
             
             ShortMessage shortMessage = (ShortMessage)message;
