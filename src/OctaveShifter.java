@@ -47,19 +47,19 @@ public class OctaveShifter implements Receiver {
      */
     public void send(MidiMessage message, long timestamp) {
             
-            ShortMessage shortMessage = (ShortMessage)message;
-            ShortMessage shiftedShortMessage = null;
+        ShortMessage shortMessage = (ShortMessage)message;
+        ShortMessage shiftedShortMessage = null;
             
-            try {
+        try {
                 
-                shiftedShortMessage = new ShortMessage(shortMessage.getCommand(), 0, 
-                    shortMessage.getData1() + 12 * numberOfOctaves, shortMessage.getData2());
+            shiftedShortMessage = new ShortMessage(shortMessage.getCommand(), 0, 
+                shortMessage.getData1() + 12 * numberOfOctaves, shortMessage.getData2());
                
-            } catch(InvalidMidiDataException e){
-                e.printStackTrace();
-            }
+        } catch(InvalidMidiDataException e){
+            e.printStackTrace();
+        }
             
-            receiver.send(shiftedShortMessage, -1);
+        receiver.send(shiftedShortMessage, -1);
         
     }
     
