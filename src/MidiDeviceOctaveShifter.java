@@ -226,7 +226,7 @@ public class MidiDeviceOctaveShifter extends Application {
      *               in the CheckMenuItem array
      * @return       the CheckMenuItem array
      */
-    public CheckMenuItem[] getExclusiveCheckMenuItems(int length, String[] texts) {
+    private CheckMenuItem[] getExclusiveCheckMenuItems(int length, String[] texts) {
 
 	CheckMenuItem[] items = new CheckMenuItem[length];
 	
